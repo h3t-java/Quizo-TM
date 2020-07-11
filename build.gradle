@@ -1,0 +1,54 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.project'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.postgresql:postgresql'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.session:spring-session-jdbc'
+
+	implementation 'org.liquibase:liquibase-core'
+	implementation 'com.h2database:h2'
+
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+
+	compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+	compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time', version: '3.0.1.RELEASE'
+	compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version: '3.0.2.RELEASE'
+	compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.2.2'
+
+	compile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.9.2'
+
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	compile group: 'org.webjars', name: 'bootstrap', version: '3.3.7'
+	compile group: 'org.webjars', name: 'jquery', version: '3.2.1'
+
+	compile group: 'org.deeplearning4j', name: 'deeplearning4j-core', version: '1.0.0-beta6'
+	compile group: 'org.deeplearning4j', name: 'deeplearning4j-nlp', version: '1.0.0-beta6'
+	compile group: 'org.nd4j', name: 'nd4j-native-platform', version: '1.0.0-beta6'
+	compile group: 'org.datavec', name: 'datavec-api', version: '1.0.0-beta6'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

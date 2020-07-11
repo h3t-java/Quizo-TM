@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="Ivan Ivanov" id="createTable-questions">
+
+		<createTable tableName="question">
+			<column name="id" type="bigint">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="pk_question_id" />
+			</column>
+			<column name="number" type="bigint">
+				<constraints nullable="false" />
+			</column>
+			<column name="question" type="varchar(250)">
+				<constraints nullable="false" />
+			</column>
+			<column name="dtype" type="varchar(20)">
+				<constraints nullable="true" />
+			</column>
+		</createTable>
+
+		<createSequence incrementBy="1"
+			sequenceName="question_id_seq" startValue="1" />
+
+	</changeSet>
+
+
+	<changeSet author="Ivan Ivanov" id="createTable-multi-question">
+
+		<createTable tableName="multi_question">
+			<column name="id" type="bigint">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="pk_multi_question_id" />
+			</column>
+			<column name="test_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint
+			baseColumnNames="id" baseTableName="multi_question"
+			constraintName="fk_multiquestion_id" referencedColumnNames="id"
+			referencedTableName="question" />
+	</changeSet>
+
+	<changeSet author="Ivan Ivanov" id="createTable-single-question">
+
+		<createTable tableName="single_question">
+			<column name="id" type="bigint">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="pk_single_question_id" />
+			</column>
+			<column name="test_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint
+			baseColumnNames="id" baseTableName="single_question"
+			constraintName="fk_singlequestion_id" referencedColumnNames="id"
+			referencedTableName="question" />
+	</changeSet>
+
+	<changeSet author="Ivan Ivanov" id="createTable-answers">
+
+		<createTable tableName="answer">
+			<column name="id" type="bigint">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="pk_answer_id" />
+			</column>
+			<column name="answer" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="is_correct" type="boolean" defaultValue="false">
+				<constraints nullable="false"/>
+			</column>
+			<column name="multi_question_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+			<column name="single_question_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+		</createTable>
+
+		<createSequence incrementBy="1"
+			sequenceName="answer_id_seq" startValue="3" />
+		
+		<addForeignKeyConstraint
+			baseColumnNames="multi_question_id" baseTableName="answer"
+			constraintName="fk_multi_question_id" referencedColumnNames="id"
+			referencedTableName="multi_question" />
+
+		<addForeignKeyConstraint
+			baseColumnNames="single_question_id" baseTableName="answer"
+			constraintName="fk_single_answer_id" referencedColumnNames="id"
+			referencedTableName="single_question" />
+
+	</changeSet>
+
+	<changeSet author="Ivan Ivanov" id="createTable-test-answer">
+
+		<createTable tableName="test_answer">
+			<column name="id" type="bigint">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="pk_test_answer_id" />
+			</column>
+			<column name="question_number" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="answer" type="varchar">
+				<constraints nullable="false"/>
+			</column>
+			<column name="test_take_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+		</createTable>
+
+		<createSequence incrementBy="1"
+			sequenceName="test_answer_id_seq" startValue="1" />
+
+	</changeSet>
+
+	<changeSet author="Ivan Ivanov" id="createTable-test-take">
+
+		<createTable tableName="test_take">
+			<column name="id" type="bigint">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="pk_test_take_id" />
+			</column>
+			<column name="success_rate" type="int">
+				<constraints nullable="true"/>
+			</column>
+			<column name="correct_answer_count" type="int">
+				<constraints nullable="true"/>
+			</column>
+			<column name="wrong_answer_count" type="int">
+				<constraints nullable="true"/>
+			</column>
+			<column name="create_date" type="timestamp">
+				<constraints nullable="true"/>
+			</column>
+			<column name="user_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+			<column name="test_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+		</createTable>
+
+		<createSequence incrementBy="1"
+			sequenceName="test_take_id_seq" startValue="1" />
+
+		<addForeignKeyConstraint
+			baseColumnNames="user_id" baseTableName="test_take"
+			constraintName="fk_user_id_id" referencedColumnNames="id"
+			referencedTableName="user" />
+
+		<addForeignKeyConstraint
+			baseColumnNames="test_take_id" baseTableName="test_answer"
+			constraintName="fk_test_take_answer_id" referencedColumnNames="id"
+			referencedTableName="test_take" />
+
+	</changeSet>
+
+	<changeSet author="Ivan Ivanov" id="createTable-test">
+
+		<createTable tableName="test">
+			<column name="id" type="bigint">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="pk_test_id" />
+			</column>
+			<column name="code" type="varchar">
+				<constraints nullable="true"/>
+			</column>
+			<column name="is_active" type="boolean">
+				<constraints nullable="true"/>
+			</column>
+			<column name="duration" type="int">
+				<constraints nullable="true"/>
+			</column>
+			<column name="create_date" type="timestamp">
+				<constraints nullable="true"/>
+			</column>
+			<column name="user_id" type="bigint">
+				<constraints nullable="true"/>
+			</column>
+		</createTable>
+
+		<createSequence incrementBy="1"
+			sequenceName="test_id_seq" startValue="1" />
+
+		<addForeignKeyConstraint
+			baseColumnNames="user_id" baseTableName="test"
+			constraintName="fk_test_creator_id" referencedColumnNames="id"
+			referencedTableName="user" />
+
+		<addForeignKeyConstraint
+			baseColumnNames="test_id" baseTableName="multi_question"
+			constraintName="fk_test_multi_choice_id" referencedColumnNames="id"
+			referencedTableName="test" />
+
+		<addForeignKeyConstraint
+			baseColumnNames="test_id" baseTableName="single_question"
+			constraintName="fk_test_single_choice_id" referencedColumnNames="id"
+			referencedTableName="test" />
+
+		<addForeignKeyConstraint
+			baseColumnNames="test_id" baseTableName="test_take"
+			constraintName="fk_test_take_id" referencedColumnNames="id"
+			referencedTableName="test" />
+
+	</changeSet>
+
+</databaseChangeLog>

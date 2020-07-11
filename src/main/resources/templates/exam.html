@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <title>Test generation</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="container my-2">
+        <div class="card">
+            <div class="card-body bg-dark">
+                <h2 class="text-white">Test Information</h2>
+                <form th:action="@{/start-test}" method="post">
+                    <div class="container my-5">
+                        <div class="col-lg-12 login-form">
+                            <div class="col-lg-12 login-form">
+                                <div class="form-group">
+                                    <label for="code" class="form-control-label">CODE</label>
+                                    <label id="code" name="code" type="text" autofocus="autofocus" class="form-control" th:text="${exam.code}"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="numquestions" class="form-control-label">QUESTIONS</label>
+                                    <label id="numquestions" name="code" type="text" autofocus="autofocus" class="form-control" th:text="${exam.getQuestionsCount()}" ></label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="form-control-label">STATUS</label>
+                                    <label id="status" name="status" type="text" autofocus="autofocus" class="form-control" th:text="${exam.isActive()} ? 'ACTIVE' : 'INACTIVE'"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="duration" class="form-control-label">DURATION</label>
+                                    <label id="duration" name="duration" type="text" autofocus="autofocus" class="form-control" th:text="${exam.duration}"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="creator" class="form-control-label">CREATOR</label>
+                                    <label id="creator" name="creator" type="text" autofocus="autofocus" class="form-control" th:text="${exam.createdBy.username}"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="createdDate" class="form-control-label">CREATED DATE</label>
+                                    <label id="createdDate" name="createdDate" type="text" autofocus="autofocus" class="form-control" th:text="${exam.createdDate}"></label>
+                                </div>
+                                <div class="col-lg-12 loginbttm">
+                                    <div class="col-lg-7 login-btm login-button">
+                                        <button type="submit" class="btn btn-outline-primary">Start</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

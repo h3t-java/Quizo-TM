@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <title>Index</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div th:if="${param.error}">
+        <div class="alert alert-danger center-block">
+            <p class="text-center">
+                Something went wrong. Please try again later.
+            </p>
+        </div>
+    </div>
+    <div th:if="${param.logout}">
+        <div class="alert alert-info center-block">
+            <p class="text-center">
+                You have been logged out.
+            </p>
+        </div>
+    </div>
+    <div th:if="${param.success}">
+        <div class="alert alert-info center-block">
+           <p class="text-center">
+               You've successfully login to our awesome app!
+           </p>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

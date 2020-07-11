@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="Ivan Ivanov" id="insert-roles">
+		<insert tableName="role">
+			<column name="id" value="1"/>
+       			<column name="name" value="Admin"/>	
+		</insert>
+		<insert tableName="role">
+			<column name="id" value="2"/>
+       			<column name="name" value="User"/>	
+		</insert>
+		<insert tableName="user">
+			<column name="id" value='1'/>
+			<column name="first_name" value="Ivan" />
+			<column name="last_name" value="Ivanov" />
+			<column name="username" value="ivan" />
+			<column name="password" value="$2a$10$KDTfN7gyC.75AZn.Fze6G.Vz9N2Buk5GFMgDy.KzVyRARtAdEfis2" />
+			<column name="email" value="ivanov@abv.bg" />
+			<column name="verified" value="true" />
+		</insert>
+		<insert tableName="users_roles">
+			<column name="user_id" value="1" />
+			<column name="role_id" value="1" />
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>
