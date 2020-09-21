@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 				.antMatchers(properties.getWhiteList())
 				.permitAll().anyRequest().authenticated()
-				.and().formLogin().loginPage("/login").defaultSuccessUrl("/?success").permitAll();
+				.and().formLogin().loginPage("/login").defaultSuccessUrl("/user/?success").permitAll();
 
 		http.sessionManagement().maximumSessions(1);
 		http.logout().logoutUrl("/logout").deleteCookies("SESSION").invalidateHttpSession(true)

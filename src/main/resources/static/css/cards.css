@@ -1,0 +1,8 @@
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    color: #A9A9A9 !important;
+}
+
+.title1 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }

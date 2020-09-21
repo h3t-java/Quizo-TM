@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:th="http://www.thymeleaf.org"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
       layout:decorate="~{fragments/layout}">
 <head>
     <title>Index</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/cards.css}"/>
 </head>
 <body>
 <div layout:fragment="content" th:remove="tag">
-    <div th:if="${param.error}">
-        <div class="alert alert-danger center-block">
-            <p class="text-center">
-                Something went wrong. Please try again later.
-            </p>
-        </div>
-    </div>
-    <div th:if="${param.logout}">
-        <div class="alert alert-info center-block">
-            <p class="text-center">
-                You have been logged out.
-            </p>
-        </div>
-    </div>
-    <div th:if="${param.success}">
-        <div class="alert alert-info center-block">
-           <p class="text-center">
-               You've successfully login to our awesome app!
-           </p>
-        </div>
-    </div>
-    <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+    <div class="container">
+        <div th:if="${param.error}">
+            <div class="alert alert-danger center-block">
+                <p class="text-center">
+                    Something went wrong. Please try again later.
+                </p>
             </div>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+        <div th:if="${param.logout}">
+            <div class="alert alert-info center-block">
+                <p class="text-center">
+                    You have been logged out.
+                </p>
             </div>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <div th:if="${param.success}">
+            <div class="alert alert-info center-block">
+                <p class="text-center">
+                    You've successfully login to our awesome app!
+                </p>
             </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 title1">
+                <h1 class="display-1"></h1>
+            </div>
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">Welcome !</h1>
+                    <p class="lead text-muted">If you are searching for an easy way to prepare for all the exams and gain the knowledge to advance, you are on the right place. Why don't you start with registration.</p>
+                    <p>
+                        <a href="/users/register" class="btn btn-primary my-2">Register</a>
+                        <a href="/login" class="btn btn-secondary my-2">Login</a>
+                        <span sec:authorize="isAuthenticated()" style="display: inline-block;">
+                            <a href="/testgen" class="btn btn-primary my-2">Generate Test</a>
+                        </span>
+                    </p>
+                </div>
+            </section>
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="/images/easy.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Easy</h5>
+                        <p class="card-text">Quizo has user friendly interface suitable for everybody.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="/images/fast.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Fast</h5>
+                        <p class="card-text">Create test and train yourself faster than anywhere else.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="/images/effective.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Effective</h5>
+                        <p class="card-text">Gain the knowledge to ace every exam.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 </body>
-</html>
+</html>>
