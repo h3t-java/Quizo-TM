@@ -1,4 +1,4 @@
-package com.project.quizo.Domain.NlpManagement;
+package com.project.quizo.Domain.TestManagement;
 
 import java.util.Objects;
 

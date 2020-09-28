@@ -1,8 +1,8 @@
 package com.project.quizo.Resource;
 
-import com.project.quizo.Domain.NlpManagement.MultiChoiceQuestion;
-import com.project.quizo.Domain.NlpManagement.SingleChoiceQuestion;
-import com.project.quizo.Domain.NlpManagement.TrueOrFalseQuestion;
+import com.project.quizo.Domain.TestManagement.MultiChoiceQuestion;
+import com.project.quizo.Domain.TestManagement.SingleChoiceQuestion;
+import com.project.quizo.Domain.TestManagement.TrueOrFalseQuestion;
 
 import java.io.Serializable;
 import java.util.List;

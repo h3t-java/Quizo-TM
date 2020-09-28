@@ -1,8 +1,7 @@
-package com.project.quizo.Domain.NlpManagement;
+package com.project.quizo.Domain.TestManagement;
 
 import com.project.quizo.Domain.UserManagement.User;
 import com.project.quizo.Listener.TestTakeListener;
-import org.apache.commons.net.ntp.TimeStamp;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

@@ -1,6 +1,6 @@
 package com.project.quizo.Listener;
 
-import com.project.quizo.Domain.NlpManagement.*;
+import com.project.quizo.Domain.TestManagement.*;
 
 import javax.persistence.PostPersist;
 import java.util.List;

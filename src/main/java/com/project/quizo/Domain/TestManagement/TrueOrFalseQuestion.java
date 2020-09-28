@@ -1,4 +1,4 @@
-package com.project.quizo.Domain.NlpManagement;
+package com.project.quizo.Domain.TestManagement;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;

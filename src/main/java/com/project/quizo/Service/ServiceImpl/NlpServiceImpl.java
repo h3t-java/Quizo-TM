@@ -1,8 +1,8 @@
 package com.project.quizo.Service.ServiceImpl;
 
 import com.project.quizo.Config.VectorData;
-import com.project.quizo.Domain.NlpManagement.*;
-import com.project.quizo.Domain.NlpManagement.Test;
+import com.project.quizo.Domain.TestManagement.*;
+import com.project.quizo.Domain.TestManagement.Test;
 import com.project.quizo.Domain.UserManagement.User;
 import com.project.quizo.Exception.InvalidNameEntityRecognitionException;
 import com.project.quizo.Repository.MultiQuestionRepository;
@@ -302,10 +302,10 @@ public class NlpServiceImpl implements NlpService {
         return questionsDTO;
     }
 
-    public com.project.quizo.Domain.NlpManagement.Test createExam(QuestionsDTO questionsDTO, String username) {
+    public com.project.quizo.Domain.TestManagement.Test createExam(QuestionsDTO questionsDTO, String username) {
         User user = userService.findByUsername(username);
         String randomId = UUID.randomUUID().toString();
-        com.project.quizo.Domain.NlpManagement.Test exam = new com.project.quizo.Domain.NlpManagement.Test(randomId, Boolean.TRUE, 180L, new Timestamp(System.currentTimeMillis()), user, questionsDTO.getMultiChoiceQuestions(), questionsDTO.getSingleChoiceQuestions(), null);
+        com.project.quizo.Domain.TestManagement.Test exam = new com.project.quizo.Domain.TestManagement.Test(randomId, Boolean.TRUE, 180L, new Timestamp(System.currentTimeMillis()), user, questionsDTO.getMultiChoiceQuestions(), questionsDTO.getSingleChoiceQuestions(), null);
 
         for (MultiChoiceQuestion multiChoiceQuestion: exam.getMultiChoiceQuestions()) {
             multiChoiceQuestion.setExam(exam);
@@ -319,7 +319,7 @@ public class NlpServiceImpl implements NlpService {
         return testRepository.save(exam);
     }
 
-    public com.project.quizo.Domain.NlpManagement.Test getTestByCode(String code) {
+    public com.project.quizo.Domain.TestManagement.Test getTestByCode(String code) {
         return testRepository.findByCodeIgnoreCase(code)
                 .orElseThrow(() -> new ResourceNotFoundException(String.format("Test not found.", "code", code)));
     }

@@ -1,9 +1,6 @@
 package com.project.quizo.Web.Rest.Controller;
 
-import com.project.quizo.Domain.NlpManagement.Answer;
-import com.project.quizo.Domain.NlpManagement.Test;
-import com.project.quizo.Domain.NlpManagement.TestAnswer;
-import com.project.quizo.Domain.NlpManagement.TestTake;
+import com.project.quizo.Domain.TestManagement.Test;
 import com.project.quizo.Resource.AnswerDTO;
 import com.project.quizo.Resource.AnswersDTO;
 import com.project.quizo.Resource.QuestionsDTO;

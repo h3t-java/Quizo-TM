@@ -10,8 +10,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.project.quizo.Domain.NlpManagement.Test;
-import com.project.quizo.Domain.NlpManagement.TestTake;
+import com.project.quizo.Domain.TestManagement.Test;
+import com.project.quizo.Domain.TestManagement.TestTake;
 import com.project.quizo.Resource.UserRegisterDTO;
 
 @Entity

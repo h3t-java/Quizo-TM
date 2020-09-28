@@ -1,7 +1,6 @@
 package com.project.quizo.Resource;
 
-import com.project.quizo.Domain.NlpManagement.Test;
-import com.project.quizo.Domain.NlpManagement.TestAnswer;
+import com.project.quizo.Domain.TestManagement.Test;
 
 import java.util.List;
 

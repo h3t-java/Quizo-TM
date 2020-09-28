@@ -1,7 +1,6 @@
-package com.project.quizo.Domain.NlpManagement;
+package com.project.quizo.Domain.TestManagement;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
 
 @Entity

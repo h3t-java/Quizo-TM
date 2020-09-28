@@ -1,7 +1,6 @@
-package com.project.quizo.Domain.NlpManagement;
+package com.project.quizo.Domain.TestManagement;
 
 import com.project.quizo.Domain.UserManagement.User;
-import org.apache.commons.net.ntp.TimeStamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

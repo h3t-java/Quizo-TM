@@ -1,7 +1,6 @@
 package com.project.quizo.Repository;
 
-import com.project.quizo.Domain.NlpManagement.Test;
-import com.project.quizo.Domain.UserManagement.User;
+import com.project.quizo.Domain.TestManagement.Test;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
