@@ -1,7 +1,7 @@
 package com.project.quizo.config;
 
-import com.project.quizo.Web.Security.Filter.CustomAuthenticationFilter;
-import com.project.quizo.Web.Security.Handler.RestAuthenticationEntryPoint;
+import com.project.quizo.web.Security.Filter.CustomAuthenticationFilter;
+import com.project.quizo.web.Security.Handler.RestAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.project.quizo.Resource.UserLoginPostDTO;
+import com.project.quizo.resource.UserLoginPostDTO;
 import com.fasterxml.classmate.TypeResolver;
 
 import springfox.documentation.builders.ApiInfoBuilder;

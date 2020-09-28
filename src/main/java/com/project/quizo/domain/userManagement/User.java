@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.project.quizo.domain.testManagement.Test;
 import com.project.quizo.domain.testManagement.TestTake;
-import com.project.quizo.Resource.UserRegisterDTO;
+import com.project.quizo.resource.UserRegisterDTO;
 
 @Entity
 @Table(name = "user", schema = "public")

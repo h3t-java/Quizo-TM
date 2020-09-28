@@ -1,7 +1,7 @@
 package com.project.quizo.domain.testManagement;
 
 import com.project.quizo.domain.userManagement.User;
-import com.project.quizo.Listener.TestTakeListener;
+import com.project.quizo.listener.TestTakeListener;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

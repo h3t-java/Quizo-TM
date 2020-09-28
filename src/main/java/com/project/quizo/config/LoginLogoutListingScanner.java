@@ -6,7 +6,7 @@ import java.util.Set;
 
 import org.springframework.http.HttpMethod;
 
-import com.project.quizo.Resource.UserLoginPostDTO;
+import com.project.quizo.resource.UserLoginPostDTO;
 import com.fasterxml.classmate.TypeResolver;
 
 import springfox.documentation.builders.OperationBuilder;
