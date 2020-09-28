@@ -1,8 +1,8 @@
 package com.project.quizo.Resource;
 
-import com.project.quizo.Domain.TestManagement.MultiChoiceQuestion;
-import com.project.quizo.Domain.TestManagement.SingleChoiceQuestion;
-import com.project.quizo.Domain.TestManagement.TrueOrFalseQuestion;
+import com.project.quizo.domain.testManagement.MultiChoiceQuestion;
+import com.project.quizo.domain.testManagement.SingleChoiceQuestion;
+import com.project.quizo.domain.testManagement.TrueOrFalseQuestion;
 
 import java.io.Serializable;
 import java.util.List;

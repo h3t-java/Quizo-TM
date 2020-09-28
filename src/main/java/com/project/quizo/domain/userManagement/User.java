@@ -1,4 +1,4 @@
-package com.project.quizo.Domain.UserManagement;
+package com.project.quizo.domain.userManagement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +10,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.project.quizo.Domain.TestManagement.Test;
-import com.project.quizo.Domain.TestManagement.TestTake;
+import com.project.quizo.domain.testManagement.Test;
+import com.project.quizo.domain.testManagement.TestTake;
 import com.project.quizo.Resource.UserRegisterDTO;
 
 @Entity

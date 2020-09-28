@@ -1,8 +1,7 @@
 package com.project.quizo.Service.ServiceImpl;
 
-import com.project.quizo.Domain.UserManagement.Role;
-import com.project.quizo.Domain.UserManagement.User;
-import com.project.quizo.Exception.UserAlreadyExistsException;
+import com.project.quizo.domain.userManagement.Role;
+import com.project.quizo.domain.userManagement.User;
 import com.project.quizo.Repository.UserRepository;
 import com.project.quizo.Resource.PasswordDoesNotMatchException;
 import com.project.quizo.Resource.ResourceNotFoundException;

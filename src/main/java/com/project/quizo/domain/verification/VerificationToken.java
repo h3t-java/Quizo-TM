@@ -1,4 +1,4 @@
-package com.project.quizo.Domain.Verification;
+package com.project.quizo.domain.verification;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -17,7 +17,7 @@ import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.project.quizo.Domain.UserManagement.User;
+import com.project.quizo.domain.userManagement.User;
 
 @Entity
 @Table(name = "verification_token", schema = "public")

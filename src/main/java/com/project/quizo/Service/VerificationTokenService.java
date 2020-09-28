@@ -1,7 +1,7 @@
 package com.project.quizo.Service;
 
-import com.project.quizo.Domain.UserManagement.User;
-import com.project.quizo.Domain.Verification.VerificationToken;
+import com.project.quizo.domain.userManagement.User;
+import com.project.quizo.domain.verification.VerificationToken;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;

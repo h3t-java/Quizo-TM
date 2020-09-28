@@ -1,6 +1,6 @@
 package com.project.quizo.Web.Rest.Controller;
 
-import com.project.quizo.Domain.TestManagement.Test;
+import com.project.quizo.domain.testManagement.Test;
 import com.project.quizo.Resource.AnswerDTO;
 import com.project.quizo.Resource.AnswersDTO;
 import com.project.quizo.Resource.QuestionsDTO;

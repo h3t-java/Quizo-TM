@@ -1,11 +1,10 @@
 package com.project.quizo.Resource;
 
-import com.project.quizo.Config.FieldMatcher.FieldMatch;
+import com.project.quizo.config.FieldMatcher.FieldMatch;
 import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.validation.constraints.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

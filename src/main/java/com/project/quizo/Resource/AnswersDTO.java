@@ -1,6 +1,6 @@
 package com.project.quizo.Resource;
 
-import com.project.quizo.Domain.TestManagement.Test;
+import com.project.quizo.domain.testManagement.Test;
 
 import java.util.List;
 

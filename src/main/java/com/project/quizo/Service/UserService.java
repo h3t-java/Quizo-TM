@@ -1,6 +1,6 @@
 package com.project.quizo.Service;
 
-import com.project.quizo.Domain.UserManagement.User;
+import com.project.quizo.domain.userManagement.User;
 import com.project.quizo.Resource.UserChangePassDTO;
 import com.project.quizo.Resource.UserRegisterDTO;
 

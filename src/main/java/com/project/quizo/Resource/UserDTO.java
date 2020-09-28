@@ -4,7 +4,7 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.List;
 
-import com.project.quizo.Domain.UserManagement.User;
+import com.project.quizo.domain.userManagement.User;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

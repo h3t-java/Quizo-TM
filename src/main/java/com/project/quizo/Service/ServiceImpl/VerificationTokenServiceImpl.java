@@ -1,7 +1,7 @@
 package com.project.quizo.Service.ServiceImpl;
 
-import com.project.quizo.Domain.UserManagement.User;
-import com.project.quizo.Domain.Verification.VerificationToken;
+import com.project.quizo.domain.userManagement.User;
+import com.project.quizo.domain.verification.VerificationToken;
 import com.project.quizo.Exception.TokenIsInvalid;
 import com.project.quizo.Repository.VerificationTokenRepository;
 import com.project.quizo.Resource.ResourceNotFoundException;

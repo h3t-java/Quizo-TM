@@ -1,4 +1,4 @@
-package com.project.quizo.Config;
+package com.project.quizo.config;
 
 import com.project.quizo.Web.Security.Filter.CustomAuthenticationFilter;
 import com.project.quizo.Web.Security.Handler.RestAuthenticationEntryPoint;
@@ -12,14 +12,13 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
-import com.project.quizo.Config.Property.EndpointProperties;
+import com.project.quizo.config.Property.EndpointProperties;
 
 @Configuration
 @EnableWebSecurity

@@ -1,4 +1,4 @@
-package com.project.quizo.Config.FieldMatcher;
+package com.project.quizo.config.FieldMatcher;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

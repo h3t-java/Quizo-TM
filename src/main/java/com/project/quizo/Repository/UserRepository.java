@@ -2,7 +2,7 @@ package com.project.quizo.Repository;
 
 import java.util.Optional;
 
-import com.project.quizo.Domain.UserManagement.User;
+import com.project.quizo.domain.userManagement.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

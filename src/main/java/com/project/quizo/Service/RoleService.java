@@ -1,6 +1,6 @@
 package com.project.quizo.Service;
 
-import com.project.quizo.Domain.UserManagement.Role;
+import com.project.quizo.domain.userManagement.Role;
 
 import java.util.List;
 

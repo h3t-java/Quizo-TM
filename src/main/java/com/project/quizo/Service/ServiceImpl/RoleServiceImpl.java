@@ -2,7 +2,7 @@ package com.project.quizo.Service.ServiceImpl;
 
 import java.util.List;
 
-import com.project.quizo.Domain.UserManagement.Role;
+import com.project.quizo.domain.userManagement.Role;
 import com.project.quizo.Repository.RoleRepository;
 import com.project.quizo.Service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;

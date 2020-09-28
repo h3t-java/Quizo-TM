@@ -7,8 +7,8 @@ import java.util.Set;
 
 import javax.transaction.Transactional;
 
-import com.project.quizo.Domain.UserManagement.Role;
-import com.project.quizo.Domain.UserManagement.User;
+import com.project.quizo.domain.userManagement.Role;
+import com.project.quizo.domain.userManagement.User;
 import com.project.quizo.Repository.UserRepository;
 import com.project.quizo.Resource.LoginUser;
 import org.springframework.beans.factory.annotation.Autowired;

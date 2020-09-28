@@ -1,4 +1,4 @@
-package com.project.quizo.Domain.TestManagement;
+package com.project.quizo.domain.testManagement;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

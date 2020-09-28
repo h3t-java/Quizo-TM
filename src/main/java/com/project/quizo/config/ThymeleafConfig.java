@@ -1,4 +1,4 @@
-package com.project.quizo.Config;
+package com.project.quizo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

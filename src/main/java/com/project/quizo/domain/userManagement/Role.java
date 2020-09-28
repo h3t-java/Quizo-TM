@@ -1,4 +1,4 @@
-package com.project.quizo.Domain.UserManagement;
+package com.project.quizo.domain.userManagement;
 
 import java.util.ArrayList;
 import java.util.Collection;

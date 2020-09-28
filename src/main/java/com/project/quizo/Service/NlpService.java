@@ -1,6 +1,6 @@
 package com.project.quizo.Service;
 
-import com.project.quizo.Domain.TestManagement.*;
+import com.project.quizo.domain.testManagement.*;
 import com.project.quizo.Resource.AnswerDTO;
 import com.project.quizo.Resource.QuestionsDTO;
 

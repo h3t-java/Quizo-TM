@@ -1,6 +1,6 @@
 package com.project.quizo.Repository;
 
-import com.project.quizo.Domain.Verification.VerificationToken;
+import com.project.quizo.domain.verification.VerificationToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

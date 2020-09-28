@@ -1,6 +1,6 @@
 package com.project.quizo.Repository;
 
-import com.project.quizo.Domain.UserManagement.Role;
+import com.project.quizo.domain.userManagement.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

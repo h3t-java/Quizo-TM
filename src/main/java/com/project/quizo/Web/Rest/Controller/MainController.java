@@ -1,6 +1,6 @@
 package com.project.quizo.Web.Rest.Controller;
 
-import com.project.quizo.Domain.UserManagement.User;
+import com.project.quizo.domain.userManagement.User;
 import com.project.quizo.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;

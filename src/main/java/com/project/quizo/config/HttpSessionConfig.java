@@ -1,8 +1,7 @@
-package com.project.quizo.Config;
+package com.project.quizo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.web.session.HttpSessionEventPublisher;
 import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
 
